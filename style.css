@@ -31,8 +31,13 @@ html {
   
   /* 4. Hero */
   .hero {
+    position: sticky;   /* veya position: fixed; isterseniz sabitlemek için */
+    top: 0;
+    margin: 0;          /* eskiden margin-top:100px; vardı, bunu kaldırdık */
+    padding: 20px 0;     /* isteğe bağlı, üst ve alt boşluk ayarı */
     text-align: center;
-    margin-top: 100px;
+    background-color: var(--bg-page); /* sticky/ fixed yapınca arka planı da koru */
+    z-index: 1000;      /* sayfa içeriğinin üstünde kalsın diye */
   }
   .hero h1 {
     font-size: 3rem;
